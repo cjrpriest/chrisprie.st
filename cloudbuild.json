@@ -1,0 +1,23 @@
+{
+    "steps" : [
+        {
+            "name" : "alpine",
+            "entrypoint": "sh",
+            "args" : [
+                "-c",
+                "echo -n ${BRANCH_NAME} | sed 's/\\//-/g' > _SANE_BRANCH_NAME"
+            ]
+        }
+    ],
+    "substitutions" : {
+        "_TF_STATE_BUCKET": "propertyheatmap_terraform_state"
+    },
+    "secrets" : [
+        {
+            "kmsKeyName" : "projects/propertyheatmap/locations/global/keyRings/aws/cryptoKeys/deploy",
+            "secretEnv" : {
+                "AWS_SECRET_ACCESS_KEY" : "CiQARN/YZ2TnEla+NjdUZo1oJOLnvoM21qcJQF9v02RVkp2Q/jkSUQAFO/Y6fj8gMd29OM5Gbf/XWb83HVM/czdxclcIxjiBV993fcE177TBHtKtv5mnjOOeXDWRsQjK3xbF9dolAHfe7T36AgV5si0CfhY5q9L1vA=="
+            }
+        }
+    ]
+}
