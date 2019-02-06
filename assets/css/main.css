@@ -2423,21 +2423,9 @@
 
 			.thumbnails a img {
 				display: block;
-/*				float: left;
-*/				width: 33%;
+				width: 33%;
 				border-radius: 6px;
-/*				margin-right: 1em;
-				border-top-left-radius: 4px;
-				border-top-right-radius: 4px;
-*/			}
-
-/*			.thumbnails a img:nth-child(even) {
-				float: left;
 			}
-
-			.thumbnails a img:nth-child(odd) {
-				float: right;
-			}*/
 
 			.thumbnails a h3, a h2, .thumbnails a p {
 				margin: 1em;
@@ -2458,8 +2446,7 @@
 			-ms-flex-direction: column;
 			flex-direction: column;
 			width: 100%;
-/*			width: calc(100% / 3);
-*/			padding-left: 2em;
+			padding-left: 2em;
 		}
 
 			.thumbnails > div > :last-child {
@@ -2504,7 +2491,6 @@
 					.thumbnails a img {
 						width:100%;
 						float: left;
-						/*margin-right: 2em;*/
 					}
 
 				.thumbnails > div {
