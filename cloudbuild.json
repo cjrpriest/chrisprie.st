@@ -34,7 +34,7 @@
             ]
         },
         {
-            "name" : "gcr.io/propertyheatmap/terraform",
+            "name" : "gcr.io/chrispriest-web/terraform",
             "entrypoint": "sh",
             "args" : [
                 "-c",
@@ -50,7 +50,7 @@
             ]
         },
         {
-            "name" : "gcr.io/propertyheatmap/terraform",
+            "name" : "gcr.io/chrispriest-web/terraform",
             "entrypoint": "sh",
             "args" : [
                 "-c",
@@ -66,7 +66,7 @@
             ]
         },
         {
-            "name" : "gcr.io/propertyheatmap/terraform",
+            "name" : "gcr.io/chrispriest-web/terraform",
             "entrypoint" : "bash",
             "args" : [
                 "-c",
@@ -78,7 +78,7 @@
             ]
         },
         {
-            "name" : "gcr.io/propertyheatmap/aws-cli",
+            "name" : "gcr.io/chrispriest-web/aws-cli",
             "entrypoint": "sh",
             "args" : [
                 "-c",
