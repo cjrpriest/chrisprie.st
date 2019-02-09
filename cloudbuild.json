@@ -70,7 +70,7 @@
             "entrypoint" : "bash",
             "args" : [
                 "-c",
-                "terraform output -json | tee /workspace/infrastructureConfig.json >(jq -j .FrontEndHost.value > ../_FRONT_END_HOST)"
+                "terraform output -json | jq -j .FrontEndHost.value > ../_FRONT_END_HOST"
             ],
             "dir" : "infrastructure",
             "env" : [
