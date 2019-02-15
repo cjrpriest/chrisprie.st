@@ -17,5 +17,5 @@ module "front_end" {
   hosted_zone_id      = "ZN01MVFLONN4L"                                                                       //chrisprie.st
   environment         = "${local.environment_name}"
   use_cdn             = "${local.environment_name == "prod" || local.environment_name == "beta"}"
-  acm_certificate_arn = "arn:aws:acm:us-east-1:900035652496:certificate/00b13cdb-80eb-43d3-99f0-1aa487c76c8c"
+  acm_certificate_arn = "arn:aws:acm:us-east-1:900035652496:certificate/16d69c37-ff0c-4564-a4e6-169ad5580607"
 }
