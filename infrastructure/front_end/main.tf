@@ -30,17 +30,24 @@ resource "aws_route53_record" "route53_record" {
   type    = "A"
 
   alias {
+    # The join() hack is required because currently the ternary operator
+    # evaluates the expressions on both branches of the condition before
+    # returning a value. When not using a CDN, the aws_cloudfront_distribution.s3_distribution
+    # resource gets a count of zero which triggers an evaluation error.
     name = "${var.use_cdn ?
-                    aws_cloudfront_distribution.s3_distribution.domain_name :
+                    join(" ", aws_cloudfront_distribution.s3_distribution.*.domain_name) :
                     aws_s3_bucket.static_site.website_domain}"
 
     zone_id = "${var.use_cdn ?
-                    aws_cloudfront_distribution.s3_distribution.hosted_zone_id :
+                    join(" ", aws_cloudfront_distribution.s3_distribution.*.hosted_zone_id) :
                     aws_s3_bucket.static_site.hosted_zone_id}"
 
     evaluate_target_health = false
   }
 }
+
+# aws_cloudfront_distribution.s3_distribution.domain_name
+# aws_cloudfront_distribution.s3_distribution.hosted_zone_id
 
 resource "aws_cloudfront_distribution" "s3_distribution" {
   count = "${var.use_cdn ? 1 : 0}"
