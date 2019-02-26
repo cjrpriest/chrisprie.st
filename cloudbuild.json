@@ -82,7 +82,7 @@
             "entrypoint": "sh",
             "args" : [
                 "-c",
-                "find /workspace/web -exec touch -m -t 200001010000 {} \\;"
+                "find /workspace/web -exec touch -m {} \\;"
             ]
         },
         {
