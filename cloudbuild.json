@@ -78,6 +78,14 @@
             ]
         },
         {
+            "name" : "alpine",
+            "entrypoint": "sh",
+            "args" : [
+                "-c",
+                "find /workspace/web -exec touch -m -t 200001010000 {} \\;"
+            ]
+        },
+        {
             "name" : "gcr.io/chrispriest-web/aws-cli",
             "entrypoint": "sh",
             "args" : [
