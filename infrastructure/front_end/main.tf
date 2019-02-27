@@ -34,6 +34,7 @@ resource "aws_route53_record" "route53_record" {
     # evaluates the expressions on both branches of the condition before
     # returning a value. When not using a CDN, the aws_cloudfront_distribution.s3_distribution
     # resource gets a count of zero which triggers an evaluation error.
+    # see https://github.com/hashicorp/terraform/issues/11566
     name = "${var.use_cdn ?
                     join(" ", aws_cloudfront_distribution.s3_distribution.*.domain_name) :
                     aws_s3_bucket.static_site.website_domain}"
