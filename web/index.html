@@ -15,6 +15,22 @@
 
 		  gtag('config', 'UA-42554219-3');
 		</script>
+		<script>
+		/**
+		* Function that tracks a click on an outbound link in Analytics.
+		* This function takes a valid URL string as an argument, and uses that URL string
+		* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+		* using 'navigator.sendBeacon' in browser that support it.
+		*/
+		var trackOutboundLink = function(url) {
+		  gtag('event', 'click', {
+		    'event_category': 'outbound',
+		    'event_label': url,
+		    'transport_type': 'beacon',
+		    'event_callback': function(){document.location = url;}
+		  });
+		}
+		</script>
 		
 		<title>Chris Priest - Technical Architect & Cloud Expert</title>
 		<meta name="description" content="I'm Chris Priest, a Technical Architect and cloud expert.	I work for cloud-first consultancy Amido, and occassionally speak about the cloud at events & on panels.">
@@ -33,10 +49,42 @@
 						<h1>Hi, I'm Chris Priest, a Technical Architect and cloud expert.<br />
 						I work for cloud-first consultancy <a href="https://www.amido.com">Amido</a>, and occassionally speak about the cloud at events & on panels.</h1>
 						<ul class="icons">
-							<li><a href="https://www.twitter.com/cjrpriest" class="icon style2 fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.linkedin.com/in/cjrpriest" class="icon style2 fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/cjrpriest" class="icon style2 fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
-							<li><a href="mailto:chris.priest@me.com" class="icon style2 fa-envelope-o" title="Email"><span class="label">Email</span></a></li>
+							<li>
+								<a
+									href="https://www.twitter.com/cjrpriest"
+									class="icon style2 fa-twitter"
+									title="Twitter"
+									onclick="trackOutboundLink('https://www.twitter.com/cjrpriest'); return false;">
+									<span class="label">Twitter</span>
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://www.linkedin.com/in/cjrpriest"
+									class="icon style2 fa-linkedin"
+									title="LinkedIn"
+									onclick="trackOutboundLink('https://www.linkedin.com/in/cjrpriest'); return false;">
+										<span class="label">LinkedIn</span>
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://github.com/cjrpriest"
+									class="icon style2 fa-github"
+									title="GitHub"
+									onclick="trackOutboundLink('https://github.com/cjrpriest'); return false;">
+										<span class="label">GitHub</span>
+								</a>
+							</li>
+							<li>
+								<a
+									href="mailto:chris.priest@me.com"
+									class="icon style2 fa-envelope-o"
+									title="Email"
+									onclick="trackOutboundLink('mailto:chris.priest@me.com'); return false;">
+										<span class="label">Email</span>
+								</a>
+							</li>
 						</ul>
 					</header>
 
