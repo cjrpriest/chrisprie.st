@@ -1,5 +1,5 @@
 $(function() {
-	$('a').each(function(i, e){$(e).attr('onclick','trackOutboundLink(\''+e.href+'\'); return false;')});
+	$('a').each(function(i, e){$(e).attr('onclick','trackOutboundLink(\''+e.href+'\');')});
 })
 
 /**
@@ -12,7 +12,6 @@ var trackOutboundLink = function(url) {
   gtag('event', 'click', {
     'event_category': 'outbound',
     'event_label': url,
-    'transport_type': 'beacon',
-    'event_callback': function(){document.location = url;}
+    'transport_type': 'beacon'
   });
 }
