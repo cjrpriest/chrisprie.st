@@ -2374,7 +2374,7 @@
 
 		}
 
-/* Thumbnails */
+/* Thumbnails2 */
 
 	.thumbnails {
 		display: -moz-flex;
@@ -2389,7 +2389,7 @@
 		margin: 0 0 2em -2em;
 	}
 
-		.thumbnails a {
+		.thumbnails div.article {
 			-moz-transition: all 0.2s ease;
 			-webkit-transition: all 0.2s ease;
 			-ms-transition: all 0.2s ease;
@@ -2401,41 +2401,41 @@
 			border-radius: 6px;
 			box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
 			background-color: rgba(255, 255, 255, 0.075);
-			cursor: pointer;
+			cursor: auto;
 			outline: 0;
 			overflow: hidden;
 		}
 
-		.thumbnails a:nth-child(even) {
+		.thumbnails div.article:nth-child(even) {
 			text-align: left;
 		}
-			.thumbnails a:nth-child(even) img {
+			.thumbnails div.article:nth-child(even) img {
 				float: left;
 				margin-right: 1em;
 			}
 
-		.thumbnails a:nth-child(odd) {
+		.thumbnails div.article:nth-child(odd) {
 			text-align: right;
 		}
-			.thumbnails a:nth-child(odd) img {
+			.thumbnails div.article:nth-child(odd) img {
 				float: right;
 				margin-left: 1em;
 			}
 
-		.thumbnails a img {
+		.thumbnails div.article img {
 			display: block;
 			width: 33%;
 			border-radius: 6px;
 		}
 
-		.thumbnails a h3, a h2, .thumbnails a p {
+		.thumbnails div.article h3, div.article h2, .thumbnails div.article p {
 			margin: 1em;
 		}
 
-		.thumbnails a:hover {
+/*		.thumbnails div.article:hover {
 			background-color: rgba(255, 255, 255, 0.25);
 			box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #FF6382;
-		}
+		}*/
 
 		.thumbnails > div {
 			display: -moz-flex;
@@ -2460,7 +2460,7 @@
 				margin: 0 0 2em -1.5em;
 			}
 
-				.thumbnails a {
+				.thumbnails div.article {
 					margin: 0 0 1.5em 0;
 				}
 
@@ -2484,12 +2484,12 @@
 				display: block;
 			}
 
-				.thumbnails a {
+				.thumbnails div.article {
 					margin: 0 0 2em 0 !important;
 					text-align: left !important;
 				}
 
-					.thumbnails a img {
+					.thumbnails div.article img {
 						width:100%;
 						float: left;
 					}
@@ -2504,141 +2504,6 @@
 					}
 
 				.thumbnails h3 {
-					font-size: 1em;
-				}
-
-		}
-
-/* Thumbnails2 */
-
-	.thumbnails2 {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-direction: row;
-		-webkit-flex-direction: row;
-		-ms-flex-direction: row;
-		flex-direction: row;
-		position: relative;
-		margin: 0 0 2em -2em;
-	}
-
-		.thumbnails2 div.article {
-			-moz-transition: all 0.2s ease;
-			-webkit-transition: all 0.2s ease;
-			-ms-transition: all 0.2s ease;
-			transition: all 0.2s ease;
-			border-bottom: none;
-			display: block;
-			width: 100%;
-			margin: 0 0 2em 0;
-			border-radius: 6px;
-			box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-			background-color: rgba(255, 255, 255, 0.075);
-			cursor: auto;
-			outline: 0;
-			overflow: hidden;
-		}
-
-		.thumbnails2 div.article:nth-child(even) {
-			text-align: left;
-		}
-			.thumbnails2 div.article:nth-child(even) img {
-				float: left;
-				margin-right: 1em;
-			}
-
-		.thumbnails2 div.article:nth-child(odd) {
-			text-align: right;
-		}
-			.thumbnails2 div.article:nth-child(odd) img {
-				float: right;
-				margin-left: 1em;
-			}
-
-		.thumbnails2 div.article img {
-			display: block;
-			width: 33%;
-			border-radius: 6px;
-		}
-
-		.thumbnails2 div.article h3, div.article h2, .thumbnails2 div.article p {
-			margin: 1em;
-		}
-
-/*		.thumbnails2 div.article:hover {
-			background-color: rgba(255, 255, 255, 0.25);
-			box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #FF6382;
-		}*/
-
-		.thumbnails2 > div {
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: -ms-flex;
-			display: flex;
-			-moz-flex-direction: column;
-			-webkit-flex-direction: column;
-			-ms-flex-direction: column;
-			flex-direction: column;
-			width: 100%;
-			padding-left: 2em;
-		}
-
-			.thumbnails2 > div > :last-child {
-				margin-bottom: 0;
-			}
-
-		@media screen and (max-width: 1280px) {
-
-			.thumbnails2 {
-				margin: 0 0 2em -1.5em;
-			}
-
-				.thumbnails2 div.article {
-					margin: 0 0 1.5em 0;
-				}
-
-				.thumbnails2 > div {
-					padding-left: 1.5em;
-				}
-
-		}
-
-		@media screen and (max-width: 980px) {
-
-			.thumbnails2 h3 {
-				font-size: 0.8em;
-			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			.thumbnails2 {
-				display: block;
-			}
-
-				.thumbnails2 div.article {
-					margin: 0 0 2em 0 !important;
-					text-align: left !important;
-				}
-
-					.thumbnails2 div.article img {
-						width:100%;
-						float: left;
-					}
-
-				.thumbnails2 > div {
-					display: block;
-					width: 100%;
-				}
-
-					.thumbnails2 > div:last-child > :last-child {
-						margin-bottom: 0 !important;
-					}
-
-				.thumbnails2 h3 {
 					font-size: 1em;
 				}
 
