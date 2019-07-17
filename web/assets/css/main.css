@@ -1408,9 +1408,16 @@
 
 	}
 
+	.webp body {
+		background-image: url("../../images/bg.webp");
+	}
+
+ 	.no-webp body {
+		background-image: url("../../images/bg.jpg");
+	}
+
 	body {
 		background-color: #000;
-		background-image: url("../../images/bg.jpg");
 		background-size: cover;
 		background-position: top center;
 	}
