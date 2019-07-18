@@ -90,7 +90,7 @@
             "entrypoint": "sh",
             "args" : [
                 "-c",
-                "aws s3 sync web/ s3://$(cat _FRONT_END_HOST) --acl public-read --cache-control max-age=120"
+                "aws s3 sync web/ s3://$(cat _FRONT_END_HOST) --acl public-read"
             ],
             "env" : [
                 "AWS_ACCESS_KEY_ID=AKIAJBDUQQPBV536ZWGQ"
