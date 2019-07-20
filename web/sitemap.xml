@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"> 
+<url>
+  <loc>https://chrisprie.st</loc>
+  <priority>1.0</priority>
+  <changefreq>monthly</changefreq>
+  <lastmod>2019-07-20</lastmod>
+</url>
+<url>
+  <loc>http://chrisprie.st/pdfs/2019-07-12-how-i-turned-my-gas-meter-smart.pdf</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+  <lastmod>2019-07-20</lastmod>
+</url>
+<url>
+  <loc>http://chrisprie.st/pdfs/2019-04-10-why-we-need-to-take-a-serious-look-at-the-build-processes-in-gcp.pdf</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+  <lastmod>2019-07-20</lastmod>
+</url>
+<url>
+  <loc>http://chrisprie.st/pdfs/2019-01-30-alternative-ways-to-think-about-serverless-ndc-london.pdf</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+  <lastmod>2019-07-20</lastmod>
+</url>
+<url>
+  <loc>http://chrisprie.st/pdfs/2018-09-26-if-i-had-a-time-machine-cloud-native.pdf</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+  <lastmod>2019-07-20</lastmod>
+</url>
+<url>
+  <loc>http://chrisprie.st/pdfs/2018-03-08-serverless-mapreduce-with-net-ldnug.pdf</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+  <lastmod>2019-07-20</lastmod>
+</url>
